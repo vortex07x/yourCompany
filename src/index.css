@@ -1,0 +1,64 @@
+:root {
+  /* Surfaces. Variable names kept from the old mint theme so nothing else breaks. */
+  --mint-700: #f4b48f; /* top bar */
+  --mint-500: #f9cdb0; /* header, nav, footer */
+  --mint-100: #fdeee3; /* section bg, hover */
+  --mint-50: #fff7f1;  /* page bg */
+  --pink: #f7b9a0;     /* promo, badges */
+  --ink: #1a1a1a;
+  --brown: #7a3318;
+  --cream: #fbf0c9;
+  --line: rgba(0, 0, 0, 0.12);
+  --container: 1320px;
+  --display: "Fraunces", Georgia, serif;
+
+  /* Accent (was teal) */
+  --accent: #c8431f;       /* buttons, borders, links */
+  --accent-dark: #a63417;  /* hover */
+  --accent-deep: #6b1f0c;  /* text on soft backgrounds */
+  --accent-soft: #fde8df;  /* pressed chips, "New" pills */
+  --accent-mid: #ee8a5c;   /* icons, dots, steps */
+  --accent-faint: #f6d9c8; /* inactive dots, soft button */
+  --focus: #b4351a;        /* focus rings */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 160px;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: var(--ink);
+  background: #fff;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+img { max-width: 100%; display: block; }
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.container {
+  width: min(100% - 40px, var(--container));
+  margin-inline: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
